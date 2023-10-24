@@ -1,0 +1,26 @@
+$black: #05080D;
+$blue: #0E1826;
+$yellow: #D6D9BF;
+$brown: #8C5B49;
+$red: #8C3232;
+
+
+.footer {
+    background-color: $black; 
+    color: $yellow; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.footer .social-media a {
+    color: $yellow; 
+    margin-right: 10px; 
+}
+
+.footer .contact-info p {
+    margin: 5px 0; 
+}
+
+.footer .copyright {
+    margin-top: 15px; 
+}

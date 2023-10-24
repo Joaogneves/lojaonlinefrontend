@@ -1,0 +1,13 @@
+$black: #05080D;
+$blue: #0E1826;
+$yellow: #D6D9BF;
+$brown: #8C5B49;
+$red: #8C3232;
+
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: $yellow;
+    padding: 30px;
+    min-height: 100vh;
+}

@@ -1,0 +1,48 @@
+<div class="mycontainer">
+    <div class="inp">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="width: 60%; justify-self: center;">
+            <input 
+            class="form-control"
+            type="search" 
+            name="pesquisa" 
+            [(ngModel)]="pesquisa" 
+            (keyup)="getCarWith(pesquisa)" 
+            placeholder="Digite o carro que procura">
+        </div>
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarTogglerDemo03" 
+            aria-controls="navbarTogglerDemo03" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <div class="main">
+        <div *ngIf="pesquisa == ''" class="div-card">
+            <a href="/carros/{{c.id}}"  *ngFor="let c of cars$ | async">
+                <div class="card">
+                    <img *ngIf="c.picture" [src]="c.picture" alt="">
+                    <img *ngIf="!c.picture" src="../../assets/images/243517-P3UBEH-366.jpg" alt="Imagem Padrão">
+                    <div class="card-title"><h1>{{c.name}}</h1></div>
+                    <div class="card-description">{{c.description}}</div>
+                    <div class="card-price"><span>Preço</span><span>{{c.price | currency: 'BRL'}}</span></div>
+                </div>
+            </a>
+        </div>
+        <div *ngIf="pesquisa != ''" class="div-card">
+            <a href="/carros/{{c.id}}"  *ngFor="let c of carSearch$ | async">
+                <div class="card">
+                    <img *ngIf="c.picture" [src]="c.picture" alt="">
+                    <img *ngIf="!c.picture" src="../../assets/images/243517-P3UBEH-366.jpg" alt="Imagem Padrão">
+                    <div class="card-title"><h1>{{c.name}}</h1></div>
+                    <div class="card-description">{{c.description}}</div>
+                    <div class="card-price"><span>Preço</span><span>{{c.price | currency: 'BRL'}}</span></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="main d-flex" *ngIf="(car$ | async) as car">
+    <div class="card col-2 d-flex justify-content-center" style="height: 85vh;">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let p of carPicture$|async">
+                    <img src="{{p.imgUrl}}" class="w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="card col-8 justify-content-between" style="height: 85vh;">
+        <div class="card-title border-bottom">
+            <h1>{{car.carBrand}}</h1>
+            <h3>{{car.name}}</h3>
+        </div>
+        <div class="card-description d-flex  border-bottom">
+            <div class="col-4">
+                <p>{{car.description}}</p>
+            </div>
+            <div class="col-8">
+                <ul class="list-group list-group-horizontal flex-row">
+                    <li class="list-group-item" *ngFor="let o of optionals">{{ o }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-description d-flex col-12  border-bottom">
+            <div class="col-4">
+                <p>{{car.carColor}}</p>
+                <p>{{car.transmissionType}}</p>
+            </div>
+            <div class="col-4">
+                <p>{{car.fuel}}</p>
+                <p>{{car.km}}</p>
+            </div>
+            <div class="col-4">
+                <p>{{car.fuel}}</p>
+                <p>{{car.km}}</p>
+            </div>
+        </div>
+        <div>
+            <div class="card-price"><span>Ano: </span><span>{{car.carYear}}</span></div>
+            <div class="card-price"><span>Preço: </span><span>{{car.price | currency: 'BRL'}}</span></div>
+        </div>
+        <div class="card-btn"><button class="my-btn">Fale com um vendedor</button></div>
+    </div>
