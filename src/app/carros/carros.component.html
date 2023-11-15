@@ -23,24 +23,20 @@
             <h1>{{car.carBrand}}</h1>
             <h3>{{car.name}}</h3>
         </div>
-        <div class="card-description d-flex  border-bottom">
-            <div class="col-4">
+        <div class="card-description d-flex">
+            <div class="col-12">
                 <p>{{car.description}}</p>
             </div>
-            <div class="col-8">
-                <ul class="list-group list-group-horizontal flex-row">
-                    <li class="list-group-item" *ngFor="let o of optionals">{{ o }}</li>
-                </ul>
+        </div>
+        <div class="card-description d-flex  border-bottom">
+            <div class="col-12">
+                <span *ngFor="let o of optionals"> &bull; {{o}} </span>
             </div>
         </div>
         <div class="card-description d-flex col-12  border-bottom">
-            <div class="col-4">
+            <div class="col-8">
                 <p>{{car.carColor}}</p>
                 <p>{{car.transmissionType}}</p>
-            </div>
-            <div class="col-4">
-                <p>{{car.fuel}}</p>
-                <p>{{car.km}}</p>
             </div>
             <div class="col-4">
                 <p>{{car.fuel}}</p>
@@ -51,5 +47,5 @@
             <div class="card-price"><span>Ano: </span><span>{{car.carYear}}</span></div>
             <div class="card-price"><span>Preço: </span><span>{{car.price | currency: 'BRL'}}</span></div>
         </div>
-        <div class="card-btn"><button class="my-btn">Fale com um vendedor</button></div>
+        <div class="card-btn"><button class="my-btn" routerLink="/financiamento">Fale com um vendedor</button></div>
     </div>

@@ -25,9 +25,7 @@ export class CarrosComponent implements OnInit {
 
   optionals: string[] = [];
 
-
-  constructor(private carService: CarService, private router: ActivatedRoute) {
-  }
+  constructor(private carService: CarService, private router: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.router.paramMap.subscribe(
@@ -37,8 +35,6 @@ export class CarrosComponent implements OnInit {
         this.getCarImages(id!);
         this.getOpts(id!)
       })
-
-
   }
 
   getCar(id: string) {
@@ -50,27 +46,22 @@ export class CarrosComponent implements OnInit {
     console.log(this.carPicture$)
   }
 
-  getOpts(id: string): void {
-    this.opts$ = this.carService.getOpts(id).pipe(
-      map(opts => {
-        this.optionals = []; // Limpar a lista antes de adicionar os novos itens
-
-        if (opts) {
-          this.addOptional(opts.electricWindow, 'Vidro elétrico');
-          this.addOptional(opts.eletricLocks, 'Trava elétrica');
-          this.addOptional(opts.airConditioning, 'Ar-Condicionado');
-          this.addOptional(opts.hidraulicSteering, 'Direção hidráulica');
-          this.addOptional(opts.airbags, 'Airbags');
-          this.addOptional(opts.multmedia, 'Multimidia');
-          this.addOptional(opts.alarm, 'Alarme');
+  getOpts(id: string) {
+    this.carService.getOpts(id).subscribe(
+      res => {
+        this.addOptional(res.electricWindow, 'Vidro elétrico');
+        this.addOptional(res.eletricLocks, 'Trava elétrica');
+        this.addOptional(res.airConditioning, 'Ar-Condicionado');
+        this.addOptional(res.hidraulicSteering, 'Direção hidráulica');
+        this.addOptional(res.airbags, 'Airbags');
+        this.addOptional(res.multmedia, 'Multimidia');
+        this.addOptional(res.alarm, 'Alarme');
+        console.log(this.optionals)
         }
-
-        return opts;
-      })
-    );
+    )
   }
 
-  private addOptional(condition: boolean, label: string): void {
+  private addOptional(condition: boolean, label: string){
     if (condition) {
       this.optionals.push(label);
     }
