@@ -48,6 +48,7 @@ export class ContatoComponent implements OnInit {
 
   getCep() {
     if (this.user.cep.length > 6) {
+      this.user.cep = this.user.cep.replace(/[.-]/g, '');
       this.service.getCep(this.user.cep).subscribe(
         res => {
           console.log(res)
@@ -62,8 +63,10 @@ export class ContatoComponent implements OnInit {
   }
   submitForm(form: NgForm) {
     const userKeys = Object.keys(this.user);
-
     if (userKeys.every(key => this.user[key] !== undefined)) {
+      form.value.rg = form.value.rg.replace(/[.-]/g, '');
+      form.value.cpf = form.value.cpf.replace(/[.-]/g, '');
+      form.value.tel = form.value.tel.replace(/[()]/g, '');
       const data = {
         cliente: {
             fullName: form.value.fullName,
@@ -78,6 +81,7 @@ export class ContatoComponent implements OnInit {
             citizenship: form.value.naturalidade,
             maritalStatus: form.value.estadoCivil,
             gender: form.value.sexo,
+            isServed: false
         },
         address: {
             cep: form.value.cep,

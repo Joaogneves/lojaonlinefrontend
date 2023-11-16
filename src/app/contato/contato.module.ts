@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { ContatoRoutingModule } from './contato-routing.module';
 import { ContatoComponent } from './contato.component';
-
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { ContatoComponent } from './contato.component';
   imports: [
     CommonModule,
     ContatoRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forChild(),
   ]
 })
 export class ContatoModule { }

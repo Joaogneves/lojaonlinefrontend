@@ -16,14 +16,14 @@ interface Cliente {
     rg: string;
     cpf: string;
     cnh: string;
-    birthdate: string; // ou Date, dependendo do formato que você deseja
+    birthdate: string;
     whatsapp: string;
     email: string;
     motherName: string;
     fatherName: string;
     citizenship: string;
-    maritalStatus: string; // aqui você pode considerar usar um enum se tiver valores fixos
-    gender: string; // ou enum
+    maritalStatus: string;
+    gender: string;
 }
 
 interface Address {

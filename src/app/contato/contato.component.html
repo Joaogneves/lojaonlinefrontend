@@ -8,15 +8,15 @@
         <div class="col-8 d-flex justify-content-center">
             <div class="mb-3 ms-1 me-1 col-4">
                 <label for="rg" class="form-label">RG</label>
-                <input type="text" class="form-control" id="rg" name="rg" placeholder="RG" [(ngModel)]="user.rg">
+                <input mask="00.000.000-0" type="text" class="form-control" id="rg" name="rg" placeholder="RG" [(ngModel)]="user.rg">
             </div>
             <div class="mb-3 ms-1 me-1 col-4">
                 <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Cpf" [(ngModel)]="user.cpf">
+                <input mask="000.000.000-00" type="text" class="form-control" id="cpf" name="cpf" placeholder="Cpf" [(ngModel)]="user.cpf">
             </div>
             <div class="mb-3 ms-1 me-1 col-4">
                 <label for="cnh" class="form-label">CNH</label>
-                <input type="text" class="form-control" id="cnh" name="cnh" placeholder="CNH" [(ngModel)]="user.cnh">
+                <input mask="000000000" type="text" class="form-control" id="cnh" name="cnh" placeholder="CNH" [(ngModel)]="user.cnh">
             </div>
         </div>
         <div class="col-8 d-flex justify-content-center">
@@ -26,7 +26,7 @@
             </div>
             <div class="mb-3 ms-1 me-1 col-4">
                 <label for="tel" class="form-label">Celular/ Whatsapp</label>
-                <input type="text" class="form-control" id="tel" name="tel" placeholder="Celular/ Whatsapp" [(ngModel)]="user.celular">
+                <input mask="(00) 000000000"  type="text" class="form-control" id="tel" name="tel" placeholder="Celular/ Whatsapp" [(ngModel)]="user.celular">
             </div>
             <div class="mb-3 ms-1 me-1 col-4">
                 <label for="email" class="form-label">Email</label>
@@ -67,7 +67,7 @@
         <div class="col-8 d-flex justify-content-center">
             <div class="mb-3 ms-1 me-1 col-2">
                 <label for="cep" class="form-label">Cep</label>
-                <input type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep">
+                <input mask="00.000.000" type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep">
             </div>
             <div class="mb-3 col-8 ms-1 me-1">
                 <label for="address" class="form-label">Endereço</label>
