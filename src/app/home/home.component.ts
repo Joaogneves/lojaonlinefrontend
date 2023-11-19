@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   cars$ = new Observable<Car[]>();
   carSearch$ = new Observable<Car[]>();
   carPicture$ = new Observable<CarPicture[]>();
+  btnSearch: boolean = true;
   constructor(private carService: CarService) {
   }
   
@@ -29,6 +30,10 @@ export class HomeComponent implements OnInit {
   
   getCarWith(carName:string) {
     this.carSearch$ = this.carService.getCarWith(carName);
+  }
+
+  setIcon() {
+    this.btnSearch = !this.btnSearch
   }
 
 }

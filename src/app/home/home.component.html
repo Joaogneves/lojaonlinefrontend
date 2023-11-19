@@ -9,7 +9,9 @@
             (keyup)="getCarWith(pesquisa)" 
             placeholder="Digite o carro que procura">
         </div>
-        <button 
+        <button
+            *ngIf="btnSearch"
+            (click)="setIcon()" 
             class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
@@ -17,7 +19,19 @@
             aria-controls="navbarTogglerDemo03" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="ms-4 fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button 
+            *ngIf="!btnSearch"
+            (click)="setIcon()"
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarTogglerDemo03" 
+            aria-controls="navbarTogglerDemo03" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <i class="ms-4 fa-solid fa-xmark"></i>
         </button>
     </div>
     <div class="main">

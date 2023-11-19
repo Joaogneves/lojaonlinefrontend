@@ -1,61 +1,61 @@
 <div class="main">
     <form class="card d-flex w-75 justify-content-center align-items-center" #form="ngForm" (ngSubmit)="submitForm(form)">
         <h4 class="mt-4">Dados Pessoais</h4>
-        <div class="mb-3 col-8">
+        <div class="mb-3 col-md-8">
             <label for="full-name" class="form-label">Nome completo</label>
             <input type="text" class="form-control" id="full-name" name="fullName" placeholder="Nome completo"[(ngModel)]="user.fullname">
         </div>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-4">
+        <div class="col-md-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="rg" class="form-label">RG</label>
                 <input mask="00.000.000-0" type="text" class="form-control" id="rg" name="rg" placeholder="RG" [(ngModel)]="user.rg">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="cpf" class="form-label">CPF</label>
                 <input mask="000.000.000-00" type="text" class="form-control" id="cpf" name="cpf" placeholder="Cpf" [(ngModel)]="user.cpf">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="cnh" class="form-label">CNH</label>
                 <input mask="000000000" type="text" class="form-control" id="cnh" name="cnh" placeholder="CNH" [(ngModel)]="user.cnh">
             </div>
         </div>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-4">
+        <div class="col-md-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="birth" class="form-label">Data de nascimento</label>
                 <input type="date" class="form-control" id="birth" name="birth" placeholder="" [(ngModel)]="user.dataNascimento">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="tel" class="form-label">Celular/ Whatsapp</label>
                 <input mask="(00) 000000000"  type="text" class="form-control" id="tel" name="tel" placeholder="Celular/ Whatsapp" [(ngModel)]="user.celular">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="user.email">
             </div>
         </div>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-4">
+        <div class="col-md-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="mother-name" class="form-label">Nome da Mãe</label>
                 <input type="text" class="form-control" id="mother-name" name="motherName" placeholder="Nome da mãe" [(ngModel)]="user.nomeMae">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="father-name" class="form-label">Nome do Pai</label>
                 <input type="text" class="form-control" id="father-name" name="fatherName" placeholder="Nome do Pai" [(ngModel)]="user.nomePai">
             </div>
-            <div class="mb-3 ms-1 me-1 col-4">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="naturalidade" class="form-label">Naturalidade</label>
                 <input type="text" class="form-control" id="naturalidade" name="naturalidade" placeholder="Naturalidade" [(ngModel)]="user.naturalidade">
             </div>
         </div>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-6">
+        <div class="col-md-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-6 col-12">
                 <label for="estado-civil" class="form-label">Estado civil</label>
                 <select name="estado-civil" id="estado-civil" name="estadoCivil" class="form-select" [(ngModel)]="user.estadoCivilSelecionado">
                     <option selected disabled>--Selecione--</option>
                     <option *ngFor="let ec of estadoCivil" value="{{ec.toUpperCase()}}">{{ec}}</option>
                 </select>
             </div>
-            <div class="mb-3 ms-1 me-1 col-6">
+            <div class="mb-3 ms-1 me-1 col-md-6 col-12">
                 <label for="sexo" class="form-label">Sexo</label>
                 <select name="sexo" id="sexo" name="sexo" class="form-select" [(ngModel)]="user.sexoSelecionado">
                     <option selected disabled>--Selecione--</option>
@@ -64,37 +64,38 @@
             </div>
         </div>
         <h4 class="mt-4">Endereço</h4>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-2">
+        <div class="col-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-2">
                 <label for="cep" class="form-label">Cep</label>
-                <input mask="00000-000" type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep">
+                <input mask="00000-000" type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep" #cepInput>
             </div>
-            <div class="mb-3 col-8 ms-1 me-1">
+            <div class="mb-3 col-md-8 ms-1 me-1">
                 <label for="address" class="form-label">Endereço</label>
                 <input type="text" class="form-control" id="address" name="address" placeholder="Endereço" (focus)="getCep()" [(ngModel)]="user.rua">
             </div>
-            <div class="mb-3 col-2 ms-1 me-1">
+            <div class="mb-3 col-md-2 ms-1 me-1">
                 <label for="house-number" class="form-label">Nº</label>
                 <input type="text" class="form-control" id="house-number" name="houseNumber" placeholder="Nº" [(ngModel)]="user.numero">
             </div>
         </div>
-        <div class="col-8 d-flex justify-content-center">
-            <div class="mb-3 ms-1 me-1 col-4">
+        <small class="text-danger" *ngIf="validCep">Cep não encontrado</small>
+        <div class="col-md-8 d-flex justify-content-center flex-md-row flex-column">
+            <div class="mb-3 ms-1 me-1 col-md-4">
                 <label for="city" class="form-label">Cidade</label>
                 <input type="text" class="form-control" id="city" name="city" placeholder="Cidade" [(ngModel)]="user.cidade">
             </div>
-            <div class="mb-3 col-4 ms-1 me-1">
+            <div class="mb-3 col-md-4 ms-1 me-1">
                 <label for="bairro" class="form-label">Bairro</label>
                 <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" [(ngModel)]="user.bairro">
             </div>
-            <div class="mb-3 col-2 ms-1 me-1">
+            <div class="mb-3 col-md-2 ms-1 me-1">
                 <label for="uf" class="form-label">Estado</label>
                 <select name="uf" id="uf" class="form-select" [(ngModel)]="user.estado">
                     <option selected disabled>--Selecione--</option>
                     <option *ngFor="let s of state">{{s}}</option>
                 </select>
             </div>
-            <div class="mb-3 col-2 ms-1 me-1">
+            <div class="mb-3 col-md-2 ms-1 me-1">
                 <label for="complemento" class="form-label">Complemento</label>
                 <input type="text" class="form-control" id="complemento" name="complement" placeholder="complemento"[(ngModel)]="user.complemento">
             </div>
