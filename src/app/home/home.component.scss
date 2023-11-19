@@ -11,9 +11,11 @@ $red: #8C3232;
     background-color: $yellow;
     padding: 30px;
     min-height: 100vh;
+
     .inp {
         display: flex;
         justify-content: end;
+
         .collapse input {
             width: 100%;
         }
@@ -30,71 +32,146 @@ $red: #8C3232;
     max-height: 50px;
 }
 
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $yellow;
-    padding: 30px;
-    min-height: 100vh;
-    a {
-        text-decoration: none;
-        color: $black;
-    }
-    a:hover {
-        cursor: pointer;
-    }
-}
-
-.card {
-    width: 280px;
-    border: 1px solid $blue;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px $blue;
-    transition: transform 0.3s;
-    margin: 15px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    border-bottom: 1px solid #ccc;
-
-}
-
-.card-title {
-    padding: 16px;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; 
-}
-
-.card-description {
-    padding: 8px 16px;
-    margin: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; 
-}
-
-.card-price {
-    padding: 16px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $blue;
-    color: $yellow;
-}
-
 .card-price span {
     font-weight: bold;
+}
+
+@media (min-width: 916px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: $yellow;
+        padding: 30px;
+        min-height: 100vh;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+    }
+
+    .card {
+        width: 280px;
+        border: 1px solid $blue;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px $blue;
+        transition: transform 0.3s;
+        margin: 15px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        border-bottom: 1px solid #ccc;
+
+    }
+
+    .card-title {
+        padding: 16px;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card-description {
+        padding: 8px 16px;
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card-price {
+        padding: 16px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $blue;
+        color: $yellow;
+    }
+
+    
+}
+
+@media (max-width: 915px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: $yellow;
+        padding: 30px;
+        min-height: 100vh;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+    }
+
+    .div-card {
+        display: block;
+        padding: 15%;
+    }
+
+    .card {
+        width: 300px;
+        border: 1px solid $blue;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px $blue;
+        margin-bottom: 10%;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        border-bottom: 1px solid #ccc;
+
+    }
+
+    .card-title {
+        padding: 16px;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card-description {
+        padding: 8px 16px;
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card-price {
+        padding: 16px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $blue;
+        color: $yellow;
+    }
 }
