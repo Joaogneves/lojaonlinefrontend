@@ -4,7 +4,7 @@ Front End do projeto [BackEnd](https://github.com/Joaogneves/lojaonlinebackend/b
 
 ## Licença
 
-Este projeto é licenciado sob a Licença MIT. Consulte o texto completo da [licença]().
+Este projeto é licenciado sob a Licença MIT. Consulte o texto completo da [licença](https://github.com/Joaogneves/lojaonlinefrontend/blob/main/LICENSE.md).
 
 
 ## Sobre
