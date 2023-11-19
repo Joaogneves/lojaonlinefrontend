@@ -22,7 +22,7 @@
     </div>
     <div class="main">
         <div *ngIf="pesquisa == ''" class="div-card">
-            <a href="/carros/{{c.id}}"  *ngFor="let c of cars$ | async">
+            <a class="card-link" href="/carros/{{c.id}}"  *ngFor="let c of cars$ | async">
                 <div class="card">
                     <img *ngIf="c.picture" [src]="c.picture" alt="">
                     <img *ngIf="!c.picture" src="../../assets/images/243517-P3UBEH-366.jpg" alt="Imagem Padrão">
@@ -33,7 +33,7 @@
             </a>
         </div>
         <div *ngIf="pesquisa != ''" class="div-card">
-            <a href="/carros/{{c.id}}"  *ngFor="let c of carSearch$ | async">
+            <a class="card-link" href="/carros/{{c.id}}"  *ngFor="let c of carSearch$ | async">
                 <div class="card">
                     <img *ngIf="c.picture" [src]="c.picture" alt="">
                     <img *ngIf="!c.picture" src="../../assets/images/243517-P3UBEH-366.jpg" alt="Imagem Padrão">

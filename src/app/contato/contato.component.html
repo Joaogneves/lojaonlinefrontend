@@ -67,7 +67,7 @@
         <div class="col-8 d-flex justify-content-center">
             <div class="mb-3 ms-1 me-1 col-2">
                 <label for="cep" class="form-label">Cep</label>
-                <input mask="00.000.000" type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep">
+                <input mask="00000-000" type="text" class="form-control" id="cep" name="cep" placeholder="Cep" [(ngModel)]="user.cep">
             </div>
             <div class="mb-3 col-8 ms-1 me-1">
                 <label for="address" class="form-label">Endereço</label>
@@ -96,7 +96,7 @@
             </div>
             <div class="mb-3 col-2 ms-1 me-1">
                 <label for="complemento" class="form-label">Complemento</label>
-                <input type="text" class="form-control" id="complemento" name="complemento" placeholder="complemento"[(ngModel)]="user.complemento">
+                <input type="text" class="form-control" id="complemento" name="complement" placeholder="complemento"[(ngModel)]="user.complemento">
             </div>
         </div>
         <div class="card-btn"><button class="my-btn">Solicitar</button></div>
