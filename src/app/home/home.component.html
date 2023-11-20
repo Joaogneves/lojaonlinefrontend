@@ -37,7 +37,7 @@
     <div class="main">
         <div *ngIf="pesquisa == ''" class="div-card">
             <a class="card-link" href="/carros/{{c.id}}"  *ngFor="let c of cars$ | async">
-                <div class="card">
+                <div class="card ms-2">
                     <img *ngIf="c.picture" [src]="c.picture" alt="">
                     <img *ngIf="!c.picture" src="../../assets/images/243517-P3UBEH-366.jpg" alt="Imagem Padrão">
                     <div class="card-title"><h1>{{c.name}}</h1></div>
